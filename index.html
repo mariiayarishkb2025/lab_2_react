@@ -4,66 +4,147 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Резюме — Марія Яріш</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .header-hero {
+      text-align: center;
+      background: linear-gradient(135deg, #881337 0%, #be123c 60%, #e11d48 100%);
+      color: #ffffff;
+      border: none;
+      padding: 45px 24px;
+      box-shadow: 0 20px 40px -15px rgba(136, 19, 55, 0.4);
+    }
+    .header-hero h1 {
+      font-size: 2.5rem;
+      letter-spacing: -0.5px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .header-subtitle {
+      font-size: 1.15rem;
+      color: #fecdd3;
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+    .contacts-pill {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .contact-badge {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .contacts-pill a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    
+    <header class="card header-hero">
+      <h1>Марія Яріш</h1>
+      <p class="header-subtitle">Фахівець з кібербезпеки та веброзробник</p>
+      <div class="contacts-pill">
+        <span class="contact-badge">Львів, Україна</span>
+        <span class="contact-badge" style="font-weight: 600;">
+          Email: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a>
+        </span>
+        <span class="contact-badge">
+          GitHub: <a href="https://github.com/mariiayarishkb2025" target="_blank" rel="noopener">mariiayarishkb2025</a>
+        </span>
+      </div>
+    </header>
 
-  <header>
-    <h1>Резюме</h1>
-    <h2>Марія Яріш</h2>
-    <p>Фахівець з кібербезпеки та веброзробник</p>
-    <p>Email: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a></p>
-    <nav>
-      <ul>
-        <li><a href="#about">Про себе</a></li>
-        <li><a href="#education">Освіта</a></li>
-        <li><a href="#skills">Навички</a></li>
-        <li><a href="#experience">Досвід та проєкти</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="container">
+      
+      <section id="about" class="card">
+        <h2>Про себе</h2>
+        <p>
+          Студентка кафедри захисту інформації Національного університету «Львівська політехніка». Захоплююся практичними аспектами мережевої безпеки, аналізом вразливостей, автоматизацією процесів на Python та створенням компонентних вебзастосунків на React. Прагну поєднувати міцні знання мережевої архітектури з розробкою надійного та безпечного програмного забезпечення.
+        </p>
+      </section>
 
-  <main>
+      <section id="education" class="card">
+        <h2>Освіта</h2>
+        <article class="project-item">
+          <h3><a href="https://lpnu.ua" target="_blank" rel="noopener">НУ «Львівська політехніка»</a></h3>
+          <span class="meta-info">2025 – 2029 • Бакалаврат</span>
+          <p>
+            <strong>Інститут комп'ютерних технологій, автоматики та метрології</strong><br>
+            Спеціальність: «Кібербезпека та захист інформації».
+          </p>
+          <p style="margin-top: 6px; font-size: 0.95rem; color: #5c242c;">
+            Основний фокус: комп'ютерні мережі, операційні системи (Linux, Windows Server), основи криптографії, реляційні бази даних та об'єктно-орієнтоване програмування.
+          </p>
+        </article>
+      </section>
 
-    <section id="about">
-      <h2>Про себе</h2>
-      <p>
-        Студентка, цікавлюся безпекою інформаційних систем,
-        комп'ютерними мережами та сучасною веброзробкою.
-      </p>
-    </section>
+      <section id="experience" class="card">
+        <h2>Практичні проєкти та досвід</h2>
+        
+        <article class="project-item">
+          <h3>Моделювання та захист корпоративної мережі</h3>
+          <span class="meta-info">Cisco Packet Tracer • VLAN • 802.1Q</span>
+          <ul class="custom-list">
+            <li>Проєктування багаторівневої локальної мережі із сегментацією за допомогою VLAN.</li>
+            <li>Налаштування міжвіланної маршрутизації (Router-on-a-Stick) та протоколу IEEE 802.1Q.</li>
+            <li>Конфігурація списків контролю доступу (ACL) та протоколів безпеки для бездротових точок.</li>
+          </ul>
+        </article>
 
-    <section id="education">
-      <h2>Освіта</h2>
-      <article>
-        <h3><a href="https://lpnu.ua" target="_blank" rel="noopener">НУ «Львівська політехніка»</a></h3>
-        <p>Кібербезпека та захист інформації</p>
-        <p><time datetime="2025">2025</time> – теперішній час</p>
-      </article>
-    </section>
+        <article class="project-item">
+          <h3>Проєктування та оптимізація реляційної бази даних</h3>
+          <span class="meta-info">MySQL • Реляційне моделювання • 3NF</span>
+          <ul class="custom-list">
+            <li>Створення концептуальної та логічної схеми предметної області.</li>
+            <li>Нормалізація сутностей до 3-ї нормальної форми, налаштування первинних і зовнішніх ключів.</li>
+            <li>Складання комплексних аналітичних SQL-запитів із фільтрацією та агрегацією.</li>
+          </ul>
+        </article>
 
-    <section id="skills">
-      <h2>Навички</h2>
-      <ul>
-        <li>Мережеві протоколи, VLAN, Packet Tracer</li>
-        <li>Python, C#, базовий HTML/JavaScript</li>
-        <li>Git, GitHub</li>
-      </ul>
-    </section>
+        <article class="project-item">
+          <h3>Розробка алгоритмічних модулів та скриптів</h3>
+          <span class="meta-info">C# • Python • OOP</span>
+          <ul class="custom-list">
+            <li>Реалізація структур даних, алгоритмів сортування та модулів логування.</li>
+            <li>Написання Python-скриптів для взаємодії з БД та автоматизації рутинної обробки файлів.</li>
+          </ul>
+        </article>
+      </section>
 
-    <section id="experience">
-      <h2>Досвід та проєкти</h2>
-      <ul>
-        <li>Моделювання захищених локальних мереж з VLAN та 802.1Q</li>
-        <li>Розробка баз даних реляційного типу</li>
-      </ul>
-    </section>
+      <section id="skills" class="card">
+        <h2>Технічний стек</h2>
+        <ul class="tags-wrapper">
+          <li class="tag">Кібербезпека</li>
+          <li class="tag">Cisco Packet Tracer</li>
+          <li class="tag">VLAN & Trunking</li>
+          <li class="tag">C# (.NET)</li>
+          <li class="tag">Python</li>
+          <li class="tag">MySQL</li>
+          <li class="tag">Linux (Ubuntu / Kali)</li>
+          <li class="tag">HTML5 / Semantic Web</li>
+          <li class="tag">CSS3 (Flexbox & Grid)</li>
+          <li class="tag">Tailwind CSS</li>
+          <li class="tag">Git & GitHub</li>
+        </ul>
+      </section>
 
-  </main>
+    </main>
 
-  <footer>
-    <p>Марія Яріш, 2026</p>
-    <p>Контакт: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a></p>
-  </footer>
-
+    <footer class="card" style="text-align: center; color: #9f1239; font-size: 0.9rem; font-weight: 500;">
+      <p>&copy; 2026 Марія Яріш • Лабораторна робота №3</p>
+    </footer>
+  </div>
 </body>
 </html>

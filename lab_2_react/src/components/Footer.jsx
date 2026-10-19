@@ -1,10 +1,8 @@
 ﻿function Footer() {
   return (
-    <footer>
-      <p>Марія Яріш, 2026</p>
-      <p>Контакт: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a></p>
+    <footer className="text-center py-6 text-rose-800/60 text-xs sm:text-sm">
+      <p>&copy; 2026 Марія Яріш • Лабораторна робота №3</p>
     </footer>
   );
 }
-
 export default Footer;
