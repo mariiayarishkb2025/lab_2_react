@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Резюме — Марія Яріш</title>
 
+  <!-- Зовнішній файл стилів -->
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Внутрішні стилі -->
   <style>
     .header-hero {
       text-align: center;
@@ -52,11 +54,13 @@
 <body>
   <div class="container">
     
+    <!-- Шапка резюме -->
     <header class="card header-hero">
       <h1>Марія Яріш</h1>
       <p class="header-subtitle">Фахівець з кібербезпеки та веброзробник</p>
       <div class="contacts-pill">
         <span class="contact-badge">Львів, Україна</span>
+        <!-- Вбудований стиль -->
         <span class="contact-badge" style="font-weight: 600;">
           Email: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a>
         </span>
@@ -68,6 +72,7 @@
 
     <main class="container">
       
+      <!-- Про себе -->
       <section id="about" class="card">
         <h2>Про себе</h2>
         <p>
@@ -75,21 +80,41 @@
         </p>
       </section>
 
-      <section id="education" class="card">
-        <h2>Освіта</h2>
-        <article class="project-item">
-          <h3><a href="https://lpnu.ua" target="_blank" rel="noopener">НУ «Львівська політехніка»</a></h3>
-          <span class="meta-info">2025 – 2029 • Бакалаврат</span>
-          <p>
-            <strong>Інститут комп'ютерних технологій, автоматики та метрології</strong><br>
-            Спеціальність: «Кібербезпека та захист інформації».
-          </p>
-          <p style="margin-top: 6px; font-size: 0.95rem; color: #5c242c;">
-            Основний фокус: комп'ютерні мережі, операційні системи (Linux, Windows Server), основи криптографії, реляційні бази даних та об'єктно-орієнтоване програмування.
-          </p>
-        </article>
-      </section>
+      <!-- Двоколонкова сітка (на мобільному стає 1 колонкою) -->
+      <div class="layout-grid">
+        <!-- Колонка 1: Освіта -->
+        <section id="education" class="card">
+          <h2>Освіта</h2>
+          <article class="project-item">
+            <h3><a href="https://lpnu.ua" target="_blank" rel="noopener">НУ «Львівська політехніка»</a></h3>
+            <span class="meta-info">2025 – 2029 • Бакалаврат</span>
+            <p>
+              <strong>ІКТА</strong><br>
+              Спеціальність: «Кібербезпека та захист інформації».
+            </p>
+            <p style="margin-top: 8px; font-size: 0.9rem; color: #5c242c;">
+              Фокус: мережева безпека, операційні системи, реляційні бази даних та основи криптографії.
+            </p>
+          </article>
+        </section>
 
+        <!-- Колонка 2: Технічний стек -->
+        <section id="skills" class="card">
+          <h2>Технічний стек</h2>
+          <ul class="tags-wrapper">
+            <li class="tag">Кібербезпека</li>
+            <li class="tag">Cisco Packet Tracer</li>
+            <li class="tag">VLAN & Trunking</li>
+            <li class="tag">C# (.NET)</li>
+            <li class="tag">Python</li>
+            <li class="tag">MySQL</li>
+            <li class="tag">Linux (Ubuntu / Kali)</li>
+            <li class="tag">Git & GitHub</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Практичні проєкти на всю ширину -->
       <section id="experience" class="card">
         <h2>Практичні проєкти та досвід</h2>
         
@@ -123,25 +148,9 @@
         </article>
       </section>
 
-      <section id="skills" class="card">
-        <h2>Технічний стек</h2>
-        <ul class="tags-wrapper">
-          <li class="tag">Кібербезпека</li>
-          <li class="tag">Cisco Packet Tracer</li>
-          <li class="tag">VLAN & Trunking</li>
-          <li class="tag">C# (.NET)</li>
-          <li class="tag">Python</li>
-          <li class="tag">MySQL</li>
-          <li class="tag">Linux (Ubuntu / Kali)</li>
-          <li class="tag">HTML5 / Semantic Web</li>
-          <li class="tag">CSS3 (Flexbox & Grid)</li>
-          <li class="tag">Tailwind CSS</li>
-          <li class="tag">Git & GitHub</li>
-        </ul>
-      </section>
-
     </main>
 
+    <!-- Підвал -->
     <footer class="card" style="text-align: center; color: #9f1239; font-size: 0.9rem; font-weight: 500;">
       <p>&copy; 2026 Марія Яріш • Лабораторна робота №3</p>
     </footer>

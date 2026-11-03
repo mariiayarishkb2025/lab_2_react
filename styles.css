@@ -164,7 +164,40 @@ a:focus {
   border-radius: 4px;
 }
 
-@media (max-width: 640px) {
+/* ===== Макет: на широких екранах — сітка з двох колонок ===== */
+main.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "about about"
+    "education skills"
+    "experience experience";
+  gap: 24px;
+}
+
+#about      { grid-area: about; }
+#education  { grid-area: education; }
+#skills     { grid-area: skills; }
+#experience { grid-area: experience; }
+
+/* ===== Адаптивність: на вузькому екрані макет змінюється ===== */
+@media (max-width: 768px) {
+  /* дві колонки -> одна колонка */
+  main.container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "education"
+      "experience"
+      "skills";
+  }
+
+  /* контакти в шапці: з ряду -> у стовпчик */
+  .contacts-pill {
+    flex-direction: column;
+    align-items: center;
+  }
+
   body {
     padding: 16px 10px;
   }
@@ -172,7 +205,8 @@ a:focus {
     padding: 20px 16px;
     border-radius: 16px;
   }
-  header h1 {
+  header.header-hero h1 {
     font-size: 1.8rem;
   }
 }
+ 
