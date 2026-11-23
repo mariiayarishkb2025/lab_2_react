@@ -4,69 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Резюме — Марія Яріш</title>
-
-  <!-- Зовнішній файл стилів -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Внутрішні стилі -->
-  <style>
-    .header-hero {
-      text-align: center;
-      background: linear-gradient(135deg, #881337 0%, #be123c 60%, #e11d48 100%);
-      color: #ffffff;
-      border: none;
-      padding: 45px 24px;
-      box-shadow: 0 20px 40px -15px rgba(136, 19, 55, 0.4);
-    }
-    .header-hero h1 {
-      font-size: 2.5rem;
-      letter-spacing: -0.5px;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-    .header-subtitle {
-      font-size: 1.15rem;
-      color: #fecdd3;
-      margin-bottom: 18px;
-      font-weight: 400;
-    }
-    .contacts-pill {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.95rem;
-    }
-    .contact-badge {
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(8px);
-      padding: 6px 16px;
-      border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
-    .contacts-pill a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     
     <!-- Шапка резюме -->
     <header class="card header-hero">
+      <button id="theme-toggle" class="theme-btn" type="button" title="Перемкнути тему">🌙</button>
       <h1>Марія Яріш</h1>
-      <p class="header-subtitle">Фахівець з кібербезпеки та веброзробник</p>
+      <p class="subtitle">Фахівець з кібербезпеки та веброзробник</p>
       <div class="contacts-pill">
-        <span class="contact-badge">Львів, Україна</span>
-        <!-- Вбудований стиль -->
-        <span class="contact-badge" style="font-weight: 600;">
-          Email: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a>
-        </span>
-        <span class="contact-badge">
-          GitHub: <a href="https://github.com/mariiayarishkb2025" target="_blank" rel="noopener">mariiayarishkb2025</a>
-        </span>
+        <span>Львів, Україна</span>
+        <span>Email: <a href="mailto:mariia.yarish.kb.2025@lpnu.ua">mariia.yarish.kb.2025@lpnu.ua</a></span>
+        <span>GitHub: <a href="https://github.com/mariiayarishkb2025" target="_blank" rel="noopener">mariiayarishkb2025</a></span>
       </div>
     </header>
 
@@ -80,9 +31,8 @@
         </p>
       </section>
 
-      <!-- Двоколонкова сітка (на мобільному стає 1 колонкою) -->
+      <!-- Двоколонкова сітка: Освіта та Технічний стек -->
       <div class="layout-grid">
-        <!-- Колонка 1: Освіта -->
         <section id="education" class="card">
           <h2>Освіта</h2>
           <article class="project-item">
@@ -98,7 +48,6 @@
           </article>
         </section>
 
-        <!-- Колонка 2: Технічний стек -->
         <section id="skills" class="card">
           <h2>Технічний стек</h2>
           <ul class="tags-wrapper">
@@ -114,7 +63,7 @@
         </section>
       </div>
 
-      <!-- Практичні проєкти на всю ширину -->
+      <!-- Практичні проєкти та досвід -->
       <section id="experience" class="card">
         <h2>Практичні проєкти та досвід</h2>
         
@@ -148,12 +97,53 @@
         </article>
       </section>
 
+      <!-- Відгуки попередніх роботодавців (ЛР №4, Варіант 27) -->
+      <section id="reviews" class="card">
+        <h2>Відгуки попередніх роботодавців</h2>
+        <div id="reviews-list" class="reviews-grid">
+          <p>Завантаження відгуків...</p>
+        </div>
+      </section>
+
     </main>
 
-    <!-- Підвал -->
+    <!-- Футер із системною інформацією з localStorage -->
     <footer class="card" style="text-align: center; color: #9f1239; font-size: 0.9rem; font-weight: 500;">
-      <p>&copy; 2026 Марія Яріш • Лабораторна робота №3</p>
+      <p>&copy; 2026 Марія Яріш • Лабораторна робота №4</p>
+      <div id="system-info" class="system-info-box"></div>
     </footer>
+
   </div>
+
+  <!-- Модальне вікно форми зворотного зв'язку -->
+  <div id="feedback-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-window card">
+      <button id="close-modal" class="modal-close-btn" type="button">&times;</button>
+      <h2>Зворотний зв'язок</h2>
+      <!-- ЗАМІНИ ТВІЙ_КОД_FORMSPREE НА СВІЙ КОД З FORMSPREE -->
+      <form action="https://formspree.io/f/meagpkeb" method="POST">
+        <div class="form-group">
+          <label>Ім'я:</label>
+          <input type="text" name="name" required placeholder="Ваше ім'я">
+        </div>
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" name="email" required placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label>Номер телефону:</label>
+          <input type="tel" name="phone" required placeholder="+380...">
+        </div>
+        <div class="form-group">
+          <label>Повідомлення:</label>
+          <textarea name="message" rows="4" required placeholder="Текст повідомлення..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Підключення JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
