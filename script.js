@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. LocalStorage: збереження та виведення системної інформації
   const systemData = {
     platform: navigator.platform,
     userAgent: navigator.userAgent,
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // 2. Fetch API: отримання коментарів (Варіант 27)
   const reviewsList = document.getElementById('reviews-list');
   fetch('https://jsonplaceholder.typicode.com/posts/27/comments')
     .then(res => res.json())
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       reviewsList.innerHTML = '<p>Помилка завантаження відгуків.</p>';
     });
 
-  // 3. Модальне вікно через 1 хвилину (60 000 мс)
   const modal = document.getElementById('feedback-modal');
   const closeBtn = document.getElementById('close-modal');
 
@@ -49,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.display = 'none';
   });
 
-  // 4. Автоматична та ручна зміна теми (07:00 - 21:00 — денна)
   const themeBtn = document.getElementById('theme-toggle');
   const hour = new Date().getHours();
 
